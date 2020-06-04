@@ -29,5 +29,10 @@ class AppServiceProvider extends ServiceProvider
             CustomerRepository::class,
             CustomerRepositoryImpl::class
         );
+
+        $this->app->singleton(
+            CustomerService::class,
+            CustomerServiceImpl::class
+        );
     }
 }
