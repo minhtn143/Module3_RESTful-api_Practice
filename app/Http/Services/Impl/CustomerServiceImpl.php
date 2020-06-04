@@ -5,7 +5,7 @@ namespace App\Http\Services\Impl;
 use App\Http\Services\CustomerService;
 use App\Http\Repositories\CustomerRepository;
 
-class CustomerServiceImpl extends CustomerService
+class CustomerServiceImpl implements CustomerService
 {
     protected $customerRepository;
 
