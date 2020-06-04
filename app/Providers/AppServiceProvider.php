@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Http\Repositories\CustomerRepository;
+use App\Http\Repositories\Impl\CustomerRepositoryImpl;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->singleton(
+            CustomerRepository::class,
+            CustomerRepositoryImpl::class
+        );
     }
 }

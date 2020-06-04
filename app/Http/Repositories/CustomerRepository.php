@@ -2,7 +2,7 @@
 
 namespace App\Http\Repositories;
 
-interface CustomerInterface extends Repository
+interface CustomerRepository extends Repository
 {
     
 }
